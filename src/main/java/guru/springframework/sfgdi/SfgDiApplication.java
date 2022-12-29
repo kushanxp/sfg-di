@@ -15,11 +15,8 @@ public class SfgDiApplication {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
 		MyController myController = (MyController) ctx.getBean("myController");
+		System.out.println("------ Primary Bean!!-----");
 		System.out.println(myController.getHello());
-		for (String name:ctx.getBeanDefinitionNames()) {
-			System.out.println(name);
-		}
-		System.out.println(ctx.getBeanDefinitionNames());
 
 		System.out.println("------ Property Injection------");
 
